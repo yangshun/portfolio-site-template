@@ -1,0 +1,22 @@
+<div class="row full-height">
+  <div class="col-md-12 main-banner three-quarter-height">
+    <h1 class="welcome-message">Portfolio</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row post" ng-repeat="item in portfolio">
+    <div class="col-md-6 portfolio-item">
+      <div class="mac-window">
+        <div class="mac-window-bar"><i class="mac-window-buttons"></i></div>
+        <img class="img-responsive mac-screenshot" src="{{item.screenshot_path}}">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2>{{item.title}}</h2>
+      <div ng-bind-html="item.description | to_trusted"></div>
+      <p class="tags">
+        <span class="label label-primary" ng-repeat="tag in item.tags">{{tag}}</span>
+      </p>
+    </div>
+  </div>
+</div>
