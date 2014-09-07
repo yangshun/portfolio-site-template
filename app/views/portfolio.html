@@ -5,13 +5,13 @@
 </div>
 <div class="container">
   <div class="row post" ng-repeat="item in portfolio">
-    <div class="col-md-6 portfolio-item">
+    <div class="col-md-7 portfolio-item">
       <div class="mac-window">
         <div class="mac-window-bar"><i class="mac-window-buttons"></i></div>
         <img class="img-responsive mac-screenshot" src="{{item.screenshot_path}}">
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-5">
       <h2>{{item.title}}</h2>
       <div ng-bind-html="item.description | to_trusted"></div>
       <p class="tags">

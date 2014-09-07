@@ -17,7 +17,7 @@ angular.module('lab1App', [
         controller: 'PortfolioCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/',
         controller: 'LandingCtrl'
       });
   });
