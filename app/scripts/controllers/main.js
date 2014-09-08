@@ -18,6 +18,11 @@ angular.module('lab1App')
     $http({method: 'GET', url: '/portfolio/portfolio.json'}).
       success(function(data, status, headers, config) {
         $scope.portfolio = data.data;
+        setTimeout(function () {
+          $('.carousel').carousel({
+            interval: 2000
+          });
+        }, 0);
       }).
       error(function(data, status, headers, config) {
         // called asynchronously if an error occurs
