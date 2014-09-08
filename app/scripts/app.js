@@ -16,6 +16,10 @@ angular.module('lab1App', [
         templateUrl: 'views/portfolio.html',
         controller: 'PortfolioCtrl'
       })
+      .when('/resume', {
+        templateUrl: 'views/resume.html',
+        controller: 'ResumeCtrl'
+      })
       .otherwise({
         redirectTo: '/',
         controller: 'LandingCtrl'
