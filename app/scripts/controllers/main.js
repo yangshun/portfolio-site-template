@@ -20,7 +20,7 @@ angular.module('lab1App')
         $scope.portfolio = data.data;
         setTimeout(function () {
           $('.carousel').carousel({
-            interval: 2000
+            interval: 3000
           });
         }, 0);
       }).
