@@ -7,7 +7,7 @@ var TWITTER_ID = 'yangshunz';
 var GITHUB_ID = 'yangshun';
 
 angular.module('PortfolioTemplate')
-  .filter('to_trusted', ['$sce', function ($sce){
+  .filter('to_trusted', ['$sce', function ($sce) {
     return function (text) {
       return $sce.trustAsHtml(text);
     };
