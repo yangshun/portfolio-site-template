@@ -38,6 +38,7 @@ body {
         > li {
             display: inline-block;
             float: none;
+            width: 125px;
         }
     }
 }
@@ -61,7 +62,7 @@ body {
 }
 
 .main-thumbnail {
-    border: 10px solid darken($theme-color, 20%);
+    border: 10px solid #fff;
     height: 164px;
     width: 164px;
 }
@@ -70,11 +71,13 @@ body {
     color: #fff;
     font-size: 64px;
     font-weight: 700;
+    text-shadow: 0 5px 0 darken($theme-color, 20%);
     text-transform: uppercase;
 }
 
 .page-title {
     color: #fff;
+    text-shadow: 0 3px 0 darken($theme-color, 20%);
     text-transform: uppercase;
 }
 
@@ -246,6 +249,9 @@ body {
   .fa {
     color: #fff;
     margin: 5px;
+    &:hover {
+        color: $theme-color;
+    }
   }
 }
 
