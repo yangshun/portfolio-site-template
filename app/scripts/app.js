@@ -5,8 +5,7 @@ angular.module('PortfolioTemplate', [
   'ngResource',
   'ngSanitize',
   'ngRoute'
-])
-  .config(function ($routeProvider) {
+]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -28,4 +27,5 @@ angular.module('PortfolioTemplate', [
         redirectTo: '/',
         controller: 'LandingCtrl'
       });
-  });
+  }]);
+

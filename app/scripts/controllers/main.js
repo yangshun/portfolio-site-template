@@ -7,12 +7,12 @@ var TWITTER_ID = 'yangshunz';
 var GITHUB_ID = 'yangshun';
 
 angular.module('PortfolioTemplate')
-  .filter('to_trusted', ['$sce', function ($sce) {
+  .filter('to_trusted', ['$sce', function ($sce){
     return function (text) {
       return $sce.trustAsHtml(text);
     };
   }])
-  .controller('AppCtrl', function ($scope) {
+  .controller('AppCtrl', ['$scope', function ($scope) {
     $scope.firstName = FIRST_NAME;
     $scope.lastName = LAST_NAME;
     $scope.facebookId = FACEBOOK_ID;
@@ -27,18 +27,18 @@ angular.module('PortfolioTemplate')
         $('.page-title').removeClass('animated').addClass('animated tada');
       }, 0);
     });
-  })
-  .controller('LandingCtrl', function ($scope) {
+  }])
+  .controller('LandingCtrl', ['$scope', function ($scope) {
     setTimeout(function () {
       $('.main-thumbnail').addClass('animated bounceInDown');
       $('.welcome-message').addClass('animated bounceInUp');
       $('.introduction').addClass('animated bounceInUp');
     }, 0);
-  })
-  .controller('ResumeCtrl', function ($scope) {
+  }])
+  .controller('ResumeCtrl', ['$scope', function ($scope) {
 
-  })
-  .controller('PortfolioCtrl', function ($scope, $http) {
+  }])
+  .controller('PortfolioCtrl', ['$scope', '$http', function ($scope, $http) {
     $http({method: 'GET', url: '/content/portfolio.json'}).
       success(function(data, status, headers, config) {
         $scope.portfolio = data.data;
@@ -52,8 +52,8 @@ angular.module('PortfolioTemplate')
         // called asynchronously if an error occurs
         // or server returns response with an error status.
       });
-  })
-  .controller('ContactCtrl', function ($scope) {
+  }])
+  .controller('ContactCtrl', ['$scope', '$http', function ($scope, $http) {
 
     $scope.formSubmitted = false;
 
@@ -65,4 +65,4 @@ angular.module('PortfolioTemplate')
       $scope.formSubmitted = true;
       $('#contact-form').hide();
     }
-  });
+  }]);
