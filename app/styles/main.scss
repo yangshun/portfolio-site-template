@@ -5,13 +5,16 @@ $brand-primary: $theme-color;
 $gray: #666;
 $navbar-default-link-color: $gray;
 $container-desktop: 1024px;
-// $container-large-desktop: 1024px;
 
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap';
 
 .navbar {
     border: 0;
     margin-bottom: 0;
+}
+
+.icon-bar {
+    background-color: $theme-color;
 }
 
 .main-name {
@@ -32,6 +35,10 @@ $container-desktop: 1024px;
 
 .nav > li > a {
     color: $gray;
+}
+
+.main-container {
+    margin-bottom: 50px;
 }
 
 
