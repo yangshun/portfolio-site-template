@@ -43,6 +43,18 @@ Using Bootstrap 3, sites are responsive out of the box. Resize the browser width
 - CSS3 animations have been used throughout the site to make the content more dynamic.
 
 
-### Special Note
+### Special Note to TA
 
 The base site was generated using [Yeoman](http://yeoman.io/)'s web app generator. Yeoman is a scaffolding tool for quick setting up of websites. What is submitted is the build version of the website, in the generated `dist` folder. CSS styles can be found inside `styles` directory and partial templates reside in the `views` directory.
+
+To setup:
+```
+npm install -g bower grunt-cli
+bower install
+npm install
+```
+
+Build for development:
+```
+grunt serve
+```
