@@ -28,5 +28,15 @@ angular.module('lab1App')
         // called asynchronously if an error occurs
         // or server returns response with an error status.
       });
+  })
+  .controller('ContactCtrl', function ($scope) {
+
+    $scope.checkForm = function () {
+      $('#submit-btn').attr('disabled', !$scope.form.$valid);
+    }
+
+    $scope.submit = function () {
+      alert('Hi ' + $scope.contact.name + '! Thank you for your email!');
+    }
   });
 

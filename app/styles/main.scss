@@ -56,6 +56,11 @@ $container-desktop: 1024px;
     text-transform: uppercase;
 }
 
+.page-title {
+    color: #fff;
+    text-transform: uppercase;
+}
+
 .introduction {
     color: $gray;
     font-size: 24px;
@@ -170,4 +175,11 @@ $container-desktop: 1024px;
     .teaching ul {
         padding-left: 0;
     }
+}
+
+/* Contact */
+
+.postcard {
+    background-color: #fffdf4;
+    padding: 30px;
 }
