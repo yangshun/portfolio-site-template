@@ -8,6 +8,15 @@ $container-desktop: 1024px;
 
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap';
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 265px;
+}
+
 .navbar {
     border: 0;
     margin-bottom: 0;
@@ -46,6 +55,7 @@ $container-desktop: 1024px;
 
 .main-banner {
     background-color: $theme-color;
+    background-image: url(http://www.transparenttextures.com/patterns/food.png);
     padding: 40px;
     text-align: center;
 }
@@ -189,4 +199,61 @@ $container-desktop: 1024px;
 .postcard {
     background-color: #fffdf4;
     padding: 30px;
+}
+
+
+/* Footer */
+
+.footer-container {
+  $footer-text-color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  color: $footer-text-color;
+  background-color: #333;
+  .footer {
+    white-space: nowrap;
+  }
+  .section-title {
+    font-weight: bold;
+    color: #777;
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+    li {
+      font-weight: 300;
+      a {
+        color: $footer-text-color;
+        &:hover {
+          text-decoration: none;
+          color: $brand-primary;
+        }
+      }
+    }
+    &.nm-social {
+      li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+  #copyright p {
+    text-align: center;
+  }
+  .fa {
+    color: #fff;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-bottom: 0;
+  }
+  .footer-container {
+    position: static;
+  }
 }

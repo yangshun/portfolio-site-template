@@ -12,7 +12,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="lab1App" ng-controller="AppCtrl">
+  <body ng-app="personalWebpageApp" ng-controller="AppCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -39,17 +39,16 @@
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav">
-            <li>
-              <a href="http://yangshun.im" target="_blank">Blog</a>
+            <li><a href="#/portfolio">Portfolio</a>
             </li>
-            <li>
-              <a href="#/portfolio">Portfolio</a>
-            </li>
+            <li><a href="#/resume">Resume</a></li>
             <li class="visible-md-inline-block visible-lg-inline-block">
               <a class="main-name text-uppercase" href="/">{{name}}</a>
             </li>
-            <li><a href="#/resume">Resume</a></li>
             <li><a href="#/contact">Contact</a></li>
+            <li>
+              <a href="http://yangshun.im" target="_blank">Blog</a>
+            </li>
           </ul>
           <!-- <a href="../" class="navbar-brand navbar-middle">{{name}}</a>
           <ul class="nav navbar-nav navbar-right">
@@ -61,6 +60,30 @@
 
     <!-- Add your site or application content here -->
     <div class="container-fluid full-height main-container" ng-view=""></div>
+
+    <footer class="footer-container">
+    <div class="container-fluid">
+      <div class="row footer">
+        <div class="col-md-2 col-md-offset-5 text-center">
+          <a ng-href="https://www.facebook.com/{{facebookId}}" target="_blank">
+            <i class="fa fa-facebook-square fa-3x"></i>
+          </a>
+          <a ng-href="https://www.twitter.com/{{twitterId}}" target="_blank">
+            <i class="fa fa-twitter fa-3x"></i>
+          </a>
+          <a ng-href="https://github.com/{{githubId}}" target="_blank">
+            <i class="fa fa-github fa-3x"></i>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1" id="copyright">
+          <hr>
+          <p>Copyright &copy; 2014 {{name}}. All rights reserved.</p>
+        </div>        
+      </div>
+    </div>
+  </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

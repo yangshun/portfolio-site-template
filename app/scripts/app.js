@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lab1App', [
+angular.module('personalWebpageApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',

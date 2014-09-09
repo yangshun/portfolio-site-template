@@ -1,8 +1,11 @@
 'use strict';
 
 var NAME = 'Yang Shun';
+var FACEBOOK_ID = 'yangshun';
+var TWITTER_ID = 'yangshunz';
+var GITHUB_ID = 'yangshun';
 
-angular.module('lab1App')
+angular.module('personalWebpageApp')
   .filter('to_trusted', ['$sce', function ($sce){
     return function (text) {
       return $sce.trustAsHtml(text);
@@ -10,6 +13,10 @@ angular.module('lab1App')
   }])
   .controller('AppCtrl', function ($scope) {
     $scope.name = NAME;
+    $scope.facebookId = FACEBOOK_ID;
+    $scope.twitterId = TWITTER_ID;
+    $scope.githubId = GITHUB_ID;
+
     setTimeout(function () {
       $('.navbar').addClass('animated swing');
     }, 0);
