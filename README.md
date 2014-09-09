@@ -45,7 +45,7 @@ Using Bootstrap 3, sites are responsive out of the box. Resize the browser width
 
 ### Special Note to TA
 
-The base site was generated using [Yeoman](http://yeoman.io/)'s web app generator. Yeoman is a scaffolding tool for quick setting up of websites. What is submitted is the build version of the website, in the generated `dist` folder. CSS styles can be found inside `styles` directory and partial templates reside in the `views` directory.
+The base site was generated using [Yeoman](http://yeoman.io/)'s web app generator. Yeoman is a scaffolding tool for quick setting up of websites. To run the site locally, please refer to the following steps:
 
 To setup:
 ```
@@ -57,4 +57,9 @@ npm install
 Build for development:
 ```
 grunt serve
+```
+
+Build for development:
+```
+grunt build
 ```
