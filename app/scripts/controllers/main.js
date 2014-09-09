@@ -15,7 +15,7 @@ angular.module('lab1App')
     }, 0);
     $scope.$on('$locationChangeStart', function (event) {
       setTimeout(function () {
-        $('.page-title').removeClass('animated').addClass('animated rubberBand');
+        $('.page-title').removeClass('animated').addClass('animated tada');
       }, 0);
     });
   })
