@@ -13,6 +13,11 @@ angular.module('lab1App')
     setTimeout(function () {
       $('.navbar').addClass('animated swing');
     }, 0);
+    $scope.$on('$locationChangeStart', function (event) {
+      setTimeout(function () {
+        $('.page-title').removeClass('animated').addClass('animated rubberBand');
+      }, 0);
+    });
   })
   .controller('LandingCtrl', function ($scope) {
     setTimeout(function () {
@@ -20,6 +25,9 @@ angular.module('lab1App')
       $('.welcome-message').addClass('animated bounceInUp');
       $('.introduction').addClass('animated bounceInUp');
     }, 0);
+  })
+  .controller('ResumeCtrl', function ($scope) {
+
   })
   .controller('PortfolioCtrl', function ($scope, $http) {
     $http({method: 'GET', url: '/portfolio/portfolio.json'}).
