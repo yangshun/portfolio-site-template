@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('personalWebpageApp', [
+angular.module('PortfolioTemplate', [
   'ngCookies',
   'ngResource',
   'ngSanitize',

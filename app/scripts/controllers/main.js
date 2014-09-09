@@ -1,18 +1,20 @@
 'use strict';
 
-var NAME = 'Yang Shun';
+var FIRST_NAME = 'Yang Shun';
+var LAST_NAME = 'Tay';
 var FACEBOOK_ID = 'yangshun';
 var TWITTER_ID = 'yangshunz';
 var GITHUB_ID = 'yangshun';
 
-angular.module('personalWebpageApp')
+angular.module('PortfolioTemplate')
   .filter('to_trusted', ['$sce', function ($sce){
     return function (text) {
       return $sce.trustAsHtml(text);
     };
   }])
   .controller('AppCtrl', function ($scope) {
-    $scope.name = NAME;
+    $scope.firstName = FIRST_NAME;
+    $scope.lastName = LAST_NAME;
     $scope.facebookId = FACEBOOK_ID;
     $scope.twitterId = TWITTER_ID;
     $scope.githubId = GITHUB_ID;
@@ -37,7 +39,7 @@ angular.module('personalWebpageApp')
 
   })
   .controller('PortfolioCtrl', function ($scope, $http) {
-    $http({method: 'GET', url: '/portfolio/portfolio.json'}).
+    $http({method: 'GET', url: '/content/portfolio.json'}).
       success(function(data, status, headers, config) {
         $scope.portfolio = data.data;
         setTimeout(function () {
@@ -64,4 +66,3 @@ angular.module('personalWebpageApp')
       $('#contact-form').hide();
     }
   });
-

@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="personalWebpageApp" ng-controller="AppCtrl">
+  <body ng-app="PortfolioTemplate" ng-controller="AppCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -43,7 +43,7 @@
             </li>
             <li><a href="#/resume">Resume</a></li>
             <li class="visible-md-inline-block visible-lg-inline-block">
-              <a class="main-name text-uppercase" href="/">{{name}}</a>
+              <a class="main-name text-uppercase" href="/">{{firstName}}</a>
             </li>
             <li><a href="#/contact">Contact</a></li>
             <li>
@@ -79,7 +79,7 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1" id="copyright">
           <hr>
-          <p>Copyright &copy; 2014 {{name}}. All rights reserved.</p>
+          <p>Copyright &copy; 2014 {{lastName}} {{firstName}}. All rights reserved.</p>
         </div>        
       </div>
     </div>
