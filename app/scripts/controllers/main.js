@@ -10,9 +10,16 @@ angular.module('lab1App')
   }])
   .controller('AppCtrl', function ($scope) {
     $scope.name = NAME;
+    setTimeout(function () {
+      $('.navbar').addClass('animated swing');
+    }, 0);
   })
   .controller('LandingCtrl', function ($scope) {
-
+    setTimeout(function () {
+      $('.main-thumbnail').addClass('animated bounceInDown');
+      $('.welcome-message').addClass('animated bounceInUp');
+      $('.introduction').addClass('animated bounceInUp');
+    }, 0);
   })
   .controller('PortfolioCtrl', function ($scope, $http) {
     $http({method: 'GET', url: '/portfolio/portfolio.json'}).
@@ -31,12 +38,15 @@ angular.module('lab1App')
   })
   .controller('ContactCtrl', function ($scope) {
 
+    $scope.formSubmitted = false;
+
     $scope.checkForm = function () {
       $('#submit-btn').attr('disabled', !$scope.form.$valid);
     }
 
     $scope.submit = function () {
-      alert('Hi ' + $scope.contact.name + '! Thank you for your email!');
+      $scope.formSubmitted = true;
+      $('#contact-form').hide();
     }
   });
 
