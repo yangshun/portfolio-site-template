@@ -39,7 +39,7 @@ angular.module('PortfolioTemplate')
 
   }])
   .controller('PortfolioCtrl', ['$scope', '$http', function ($scope, $http) {
-    $http({method: 'GET', url: '/content/portfolio.json'}).
+    $http({method: 'GET', url: 'content/portfolio.json'}).
       success(function(data, status, headers, config) {
         $scope.portfolio = data.data;
         setTimeout(function () {
