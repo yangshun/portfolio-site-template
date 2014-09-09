@@ -28,4 +28,3 @@ angular.module('PortfolioTemplate', [
         controller: 'LandingCtrl'
       });
   }]);
-
