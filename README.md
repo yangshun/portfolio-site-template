@@ -34,7 +34,7 @@ Using Bootstrap 3, sites are responsive out of the box. Resize the browser width
 #### Form Validation
 - AngularJS' built-in form validation is used to check for the valid state of the form. There's no need for jQuery here.
 
-###3 jQuery Effects
+#### jQuery Effects
 - The form is hidden using `hide()` after the user has entered valid form input and hits on "Submit".
 
 
